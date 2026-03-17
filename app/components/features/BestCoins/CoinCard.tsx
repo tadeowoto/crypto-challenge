@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { Coin } from "@/types/coins";
 import {
   Card,
