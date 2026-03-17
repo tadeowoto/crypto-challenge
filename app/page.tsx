@@ -1,4 +1,3 @@
-import Header from "./components/layout/Header/Header";
 import BestCoins from "./components/features/BestCoins/BestCoins";
 import { plusJakartaSans } from "./fonts";
 export default function Home() {

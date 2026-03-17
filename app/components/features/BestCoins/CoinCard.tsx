@@ -10,6 +10,7 @@ import {
 } from "../../ui/card";
 import { Button } from "../../ui/button";
 import { Badge } from "../../ui/badge";
+import Link from "next/link";
 
 interface CoinCardProps {
   coin: Coin;
@@ -52,7 +53,9 @@ export default function CoinCard({ coin }: CoinCardProps) {
         </div>
       </CardContent>
       <CardFooter>
-        <Button className="w-full">View Details</Button>
+        <Link href={`/coins/${coin.id}`} className="w-full">
+          <Button className="w-full">View Details</Button>
+        </Link>
       </CardFooter>
     </Card>
   );
