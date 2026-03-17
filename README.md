@@ -48,6 +48,8 @@ Desarrollar una aplicación funcional en **React** que permita visualizar el est
 
 ## 🔗 Recursos de la API
 
+- **Base Url**
+  https://api.coingecko.com/api/v3/coins/list
 - **Endpoint Lista (Top 10):**
 - **Endpoint Detalle (por ID):**
 
