@@ -1,36 +1,22 @@
+import Header from "./components/Header";
+import BestCoins from "./components/BestCoins";
+import { plusJakartaSans } from "./ui/fonts";
 export default function Home() {
   return (
     <>
-      <header>
-        <nav>
-          <ul>
-            <li>
-              <a href="#">Home</a>
-            </li>
-            <li>
-              <a href="#">About</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-      <main>
-        <header>
-          <h1>Top crypto coins</h1>
-          <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda
-            officiis iste quaerat cum expedita amet quo incidunt. Exercitationem
-            cum minima ad odit doloremque optio expedita dignissimos eum.
-            Asperiores, accusamus placeat?
+      <Header />
+      <main className="container p-5">
+        <header className="text-center flex flex-col gap-4">
+          <h1
+            className={`text-4xl ${plusJakartaSans.className} font-bold tracking-tight text-accent-color`}
+          >
+            Top crypto coins
+          </h1>
+          <p className="text-pretty">
+            The best crypto coins to start trading with your portfolio today !
           </p>
         </header>
-        <section>
-          <h2>Coin List</h2>
-          <ul>
-            <li>Bitcoin</li>
-            <li>Ethereum</li>
-            <li>Litecoin</li>
-          </ul>
-        </section>
+        <BestCoins />
       </main>
     </>
   );
