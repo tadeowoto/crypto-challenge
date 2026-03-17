@@ -1,10 +1,8 @@
-import { inter } from "./ui/fonts";
 import "./globals.css";
 import { Inter } from "next/font/google";
 import { cn } from "@/lib/utils";
-
-const inter = Inter({subsets:['latin'],variable:'--font-sans'});
-
+import Header from "./components/layout/Header/Header";
+const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 export default function RootLayout({
   children,
@@ -13,9 +11,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es" className={cn("font-sans", inter.variable)}>
-      <body
-        className={`${inter.variable} antialiased bg-background-color text-text-color`}
-      >
+      <body className={`antialiased bg-background-color text-text-color`}>
+        <Header />
         {children}
       </body>
     </html>

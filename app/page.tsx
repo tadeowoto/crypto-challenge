@@ -1,10 +1,9 @@
-import Header from "./components/Header";
-import BestCoins from "./components/BestCoins";
-import { plusJakartaSans } from "./ui/fonts";
+import Header from "./components/layout/Header/Header";
+import BestCoins from "./components/features/BestCoins/BestCoins";
+import { plusJakartaSans } from "./fonts";
 export default function Home() {
   return (
     <>
-      <Header />
       <main className="container p-5">
         <header className="text-center flex flex-col gap-4">
           <h1
