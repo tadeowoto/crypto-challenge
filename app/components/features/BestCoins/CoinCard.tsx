@@ -17,6 +17,8 @@ interface CoinCardProps {
 }
 
 export default function CoinCard({ coin }: CoinCardProps) {
+  const isPositive = coin.price_change_percentage_24h > 0;
+
   return (
     <Card className="w-full max-w-sm ">
       <img
@@ -45,7 +47,9 @@ export default function CoinCard({ coin }: CoinCardProps) {
         </div>
         <div className="flex justify-between">
           <span className="text-muted-foreground">24h Change:</span>
-          <span>{coin.price_change_percentage_24h}%</span>
+          <span className={isPositive ? "text-green-500" : "text-red-500"}>
+            {coin.price_change_percentage_24h}%
+          </span>
         </div>
         <div className="flex justify-between">
           <span className="text-muted-foreground">Volume:</span>

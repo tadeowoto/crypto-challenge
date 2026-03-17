@@ -10,10 +10,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={cn("font-sans", inter.variable)}>
-      <body className={`antialiased bg-background-color text-text-color`}>
+    <html lang="es" className={inter.variable}>
+      <body
+        className={cn(
+          "min-h-screen antialiased font-sans",
+          "bg-background-color text-text-color",
+        )}
+      >
         <Header />
-        {children}
+        <main>{children}</main>
       </body>
     </html>
   );
