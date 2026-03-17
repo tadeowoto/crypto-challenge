@@ -44,11 +44,11 @@ export type CoinMarket = {
   preview_listing: boolean;
   public_notice: string | null;
   additional_notices: string[];
-  description: Languages; // Objeto con traducciones
-  links: Links;           // Objeto con redes y webs
-  image: Images;          // Objeto con tamaños de imagen
+  description: Languages; 
+  links: Links;       
+  image: Images;         
   market_cap_rank: number;
-  market_data: MarketData; // El objeto más complejo
+  market_data: MarketData; 
   last_updated: string;
 };
 
