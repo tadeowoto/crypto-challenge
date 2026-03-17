@@ -1,4 +1,15 @@
 import { Coin } from "@/types/coins";
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  CardFooter,
+  CardAction,
+} from "../../ui/card";
+import { Button } from "../../ui/button";
+import { Badge } from "../../ui/badge";
 
 interface CoinCardProps {
   coin: Coin;
@@ -6,10 +17,43 @@ interface CoinCardProps {
 
 export default function CoinCard({ coin }: CoinCardProps) {
   return (
-    <div className="border p-4 rounded-lg">
-      <img src={coin.image} alt={coin.name} className="w-10 h-10" />
-      <h3>{coin.name}</h3>
-      <p>${coin.current_price.toLocaleString()}</p>
-    </div>
+    <Card className="w-full max-w-sm ">
+      <img
+        src={coin.image}
+        alt={coin.name}
+        className="aspect-video w-full object-contain p-6 bg-muted/20"
+      />
+      <CardHeader>
+        <CardAction>
+          <Badge variant="secondary">Rank #{coin.market_cap_rank}</Badge>
+        </CardAction>
+        <CardTitle>
+          {coin.name} ({coin.symbol.toUpperCase()})
+        </CardTitle>
+        <CardDescription>
+          {Intl.NumberFormat("en-US", {
+            style: "currency",
+            currency: "USD",
+          }).format(coin.current_price)}
+        </CardDescription>
+      </CardHeader>
+      <CardContent className="grid gap-2">
+        <div className="flex justify-between">
+          <span className="text-muted-foreground">Market Cap:</span>
+          <span>${coin.market_cap.toLocaleString()}</span>
+        </div>
+        <div className="flex justify-between">
+          <span className="text-muted-foreground">24h Change:</span>
+          <span>{coin.price_change_percentage_24h}%</span>
+        </div>
+        <div className="flex justify-between">
+          <span className="text-muted-foreground">Volume:</span>
+          <span>${coin.total_volume.toLocaleString()}</span>
+        </div>
+      </CardContent>
+      <CardFooter>
+        <Button className="w-full">View Details</Button>
+      </CardFooter>
+    </Card>
   );
 }
