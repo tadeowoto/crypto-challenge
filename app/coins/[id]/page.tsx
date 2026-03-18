@@ -1,25 +1,18 @@
 /* eslint-disable @next/next/no-img-element */
-import { CoinMarket } from "@/types/coins";
+
 import Link from "next/link";
 import { MoveLeft } from "lucide-react";
 import { ExternalLink } from "lucide-react";
 import { Button } from "@/app/components/ui/button";
 import { Badge } from "@/app/components/ui/badge";
-
+import { getCoinsById } from "@/lib/api";
 export default async function CoinsPage({
   params,
 }: {
   params: Promise<{ id: string }>;
 }) {
   const { id } = await params;
-
-  const response = await fetch(`https://api.coingecko.com/api/v3/coins/${id}`);
-
-  if (!response.ok) {
-    throw new Error("Something went wrong");
-  }
-
-  const data: CoinMarket = await response.json();
+  const data = await getCoinsById(id);
 
   return (
     <main className="max-w-4xl mx-auto px-6 py-12">

@@ -12,21 +12,21 @@ Desarrollar una aplicación funcional en **React** que permita visualizar el est
 
 - Consumir la API de **CoinGecko** para obtener el Top 10 de monedas por capitalización de mercado.
 - Renderizar una tabla o lista que incluya:
-  - Icono, Nombre y Símbolo de la moneda.
-  - Precio actual en USD (formateado: `$ 0.00`).
-  - Variación porcentual de las últimas 24h.
+  - Icono, Nombre y Símbolo de la moneda. ✅
+  - Precio actual en USD (formateado: `$ 0.00`). ✅
+  - Variación porcentual de las últimas 24h. ✅
 
 ### 2. Lógica de UI y Tendencias
 
 - Implementar un sistema de colores condicional para la variación de precio:
-  - **Verde**: Variación positiva ($\ge$ 0%).
-  - **Rojo**: Variación negativa (< 0%).
+  - **Verde**: Variación positiva ($\ge$ 0%). ✅
+  - **Rojo**: Variación negativa (< 0%). ✅
 - Formatear los precios utilizando la API nativa `Intl.NumberFormat`.
 
 ### 3. Flujo de Datos Dependiente (Master-Detail)
 
-- Al hacer clic en una moneda de la lista, la aplicación debe detectar el cambio de selección y realizar una **segunda petición** a la API.
-- Obtener y mostrar detalles adicionales de la moneda seleccionada (ej. descripción o precio máximo histórico) en una sección de detalle.
+- Al hacer clic en una moneda de la lista, la aplicación debe detectar el cambio de selección y realizar una **segunda petición** a la API. ✅
+- Obtener y mostrar detalles adicionales de la moneda seleccionada (ej. descripción o precio máximo histórico) en una sección de detalle. ✅
 
 ### 4. Actualización Automática (Polling)
 
