@@ -19,7 +19,7 @@ export const getCoinsById = async (id:string) => {
 
     const data: CoinMarket = await response.json();
     
-  return data
+    return  data
     
 }
 
