@@ -7,7 +7,7 @@ import {
 } from "./components/ui/card";
 
 export default function Loading() {
-  const skeletons = new Array(6).fill(null);
+  const skeletons = new Array(10).fill(null);
 
   return (
     <main className="container p-5 mx-auto">
