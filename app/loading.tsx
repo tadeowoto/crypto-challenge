@@ -24,10 +24,10 @@ export default function Loading() {
         <h2 className="text-2xl font-bold text-center">Coin List</h2>
 
         <ul className="grid grid-cols-1 gap-5 md:grid-cols-2 lg:grid-cols-3 justify-items-center">
-          {skeletons.map((_, i) => (
+        {skeletons.map((_, i) => (
             <li key={i} className="w-full max-w-sm">
               <Card className="w-full h-full flex flex-col overflow-hidden">
-                <div className="aspect-video w-full p-6 bg-muted/20 flex items-center justify-center">
+                <div className="aspect-video w-full p-6 bg-muted/30 flex items-center justify-center">
                   <Skeleton className="h-20 w-20 rounded-full" />
                 </div>
 

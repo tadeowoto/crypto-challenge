@@ -95,15 +95,15 @@ export default async function CoinsPage({
             />
           </div>
 
-          <aside className="space-y-8">
-            <div className="p-6 rounded-2xl bg-muted/30 border border-border/50">
-              <h3 className="text-sm font-medium text-muted-foreground mb-2 uppercase tracking-wider">
-                Price
-              </h3>
-              <p className="text-3xl font-bold tracking-tight">
-                ${currentPrice}
-              </p>
-            </div>
+        <aside className="space-y-8">
+          <div className="p-6 rounded-2xl bg-card/60 backdrop-blur-md border border-border/40 space-y-3">
+            <h3 className="text-sm font-medium text-muted-foreground mb-2 uppercase tracking-wider">
+              Price
+            </h3>
+            <p className="text-4xl font-bold tracking-tight text-accent-color">
+             ${currentPrice}
+            </p>
+          </div>
 
             <div className="space-y-4 px-2">
               <div className="flex justify-between items-center border-b border-border/50 pb-3">
