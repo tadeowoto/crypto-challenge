@@ -12,6 +12,7 @@ export default async function CoinsPage({
 }: {
   params: Promise<{ id: string }>;
 }) {
+  await new Promise((resolve) => setTimeout(resolve, 2000));
   const { id } = await params;
   let data;
 
