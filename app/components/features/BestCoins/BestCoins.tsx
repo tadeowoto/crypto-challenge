@@ -2,6 +2,7 @@ import CoinCard from "./CoinCard";
 import { getListCoins } from "@/lib/api";
 
 export default async function BestCoins() {
+  await new Promise((resolve) => setTimeout(resolve, 2000));
   const coins = await getListCoins();
 
   return (
