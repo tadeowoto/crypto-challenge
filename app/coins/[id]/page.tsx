@@ -54,7 +54,10 @@ export default async function CoinsPage({
                 <h1 className="text-4xl font-bold tracking-tight">
                   {data.name}
                 </h1>
-                <Badge variant="secondary" className="font-mono uppercase">
+                <Badge
+                  variant="secondary"
+                  className="font-mono uppercase  border border-sky-500/40 px-2 py-0.5 rounded-md"
+                >
                   {data.symbol}
                 </Badge>
               </div>
@@ -68,7 +71,7 @@ export default async function CoinsPage({
             asChild
             variant="outline"
             size="sm"
-            className="rounded-full hover:bg-primary hover:text-primary-foreground transition-colors"
+            className="rounded-full bg-transparent hover:transform hover:-translate-y-1 transition-all"
           >
             <a
               href={data.links.homepage[0]}
@@ -95,15 +98,15 @@ export default async function CoinsPage({
             />
           </div>
 
-        <aside className="space-y-8">
-          <div className="p-6 rounded-2xl bg-card/60 backdrop-blur-md border border-border/40 space-y-3">
-            <h3 className="text-sm font-medium text-muted-foreground mb-2 uppercase tracking-wider">
-              Price
-            </h3>
-            <p className="text-4xl font-bold tracking-tight text-accent-color">
-             ${currentPrice}
-            </p>
-          </div>
+          <aside className="space-y-8">
+            <div className="p-6 rounded-2xl bg-transparent text-white backdrop-blur-md border border-border/40 space-y-3">
+              <h3 className="text-sm font-medium text-muted-foreground mb-2 uppercase tracking-wider">
+                Price
+              </h3>
+              <p className="text-4xl font-bold tracking-tight text-accent-color">
+                ${currentPrice}
+              </p>
+            </div>
 
             <div className="space-y-4 px-2">
               <div className="flex justify-between items-center border-b border-border/50 pb-3">

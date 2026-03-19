@@ -3,10 +3,10 @@ import { plusJakartaSans } from "./fonts";
 export default function Home() {
   return (
     <>
-      <main className="container p-5">
+      <main className="w-full h-full p-5">
         <header className="text-center flex flex-col gap-4">
           <h1
-            className={`text-4xl ${plusJakartaSans.className} font-bold tracking-tight text-accent-color`}
+            className={`text-4xl ${plusJakartaSans.className} font-bold tracking-tight text-accent-color `}
           >
             Top crypto coins
           </h1>
@@ -14,7 +14,9 @@ export default function Home() {
             The best crypto coins to start trading with your portfolio today !
           </p>
         </header>
-        <BestCoins />
+        <div className="w-full h-full p-5 ">
+          <BestCoins />
+        </div>
       </main>
     </>
   );

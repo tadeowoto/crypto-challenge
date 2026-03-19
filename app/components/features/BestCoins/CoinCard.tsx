@@ -21,15 +21,20 @@ export default function CoinCard({ coin }: CoinCardProps) {
   const isPositive = coin.price_change_percentage_24h > 0;
 
   return (
-    <Card className="w-full max-w-sm bg-card/70 backdrop-blur-sm border border-border/30 hover:shadow-lg hover:shadow-black/30 hover:scale-[1.02] transition-all duration-300">
+    <Card className="w-full max-w-sm flex flex-col justify-between min-h-115 bg-transparent text-white backdrop-blur-md border border-border/40 shadow-sm hover:shadow-lg hover:shadow-slate-900/40 hover:scale-[1.02] transition-all duration-300">
       <img
         src={coin.image}
         alt={coin.name}
-        className="aspect-video w-full object-contain p-6 bg-muted/20"
+        className="aspect-video w-full object-contain p-6 bg-transparent border-b border-border/40"
       />
       <CardHeader>
         <CardAction>
-          <Badge variant="secondary" className="bg-card/60 border border-border/40 px-2 py-0.5 rounded-md shadow-sm">Rank #{coin.market_cap_rank}</Badge>
+          <Badge
+            variant="secondary"
+            className="bg-sky-500/20 text-sky-100 border border-sky-500/40 px-2 py-0.5 rounded-md shadow-sm"
+          >
+            Rank #{coin.market_cap_rank}
+          </Badge>
         </CardAction>
         <CardTitle>
           {coin.name} ({coin.symbol.toUpperCase()})
@@ -58,8 +63,10 @@ export default function CoinCard({ coin }: CoinCardProps) {
         </div>
       </CardContent>
       <CardFooter>
-        <Link href={`/coins/${coin.id}`} className="w-full">
-          <Button className="w-full">View Details</Button>
+        <Link href={`/coins/${coin.id}`} className="w-full ">
+          <Button className="w-full bg-white text-black hover:bg-white/80 hover:cursor-pointer">
+            View Details
+          </Button>
         </Link>
       </CardFooter>
     </Card>
